@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.mui-icon-left-nav{
+				color: red;
+			}
+			textarea{
+				width: 100%;
+				height:150px;
+			}
+			button{
+				color: white;
+				background: red;
+				width: 100%;
+				border-radius: 3px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">留言@undefined</h1>
+		</header>
+		<div class="mui-content">
+		    <textarea placeholder="请输入留言" id="textarea"></textarea>
+		    <!--<input type="text" id="textarea" value="" />-->
+		</div>
+		<div id="back">
+		    <button type="button" >发布留言</button>
+		</div>
+	</body>
+    <script type="text/javascript">
+		mui("#back").on('tap','button',function(){
+			var text = document.getElementById("back");
+    	    var textValue = document.getElementById("textarea").value;
+    			if(textValue==""){
+//  				mui.prompt('text','deftext','title',['true','false'],null,'div') 
+//					document.querySelector('.mui-popup-input input').type='password' 
+    				mui.alert("请输入留言!","系统提示","确定",null,"div");
+    			}
+    			else{
+    				mui.openWindow({
+		                url: 'A.baobeixiangqing.html', 
+		                id:'A.baobeixiangqing.html'
+    				})
+    			}
+    	})
+    </script>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/E.chuangjiandingdan.css"/>
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">创建订单</h1>
+		</header>
+		<div class="mui-content" id="list">
+		    <div class="mui-card">
+				<div class="mui-card-header">
+					<span class="mui-navigate-right">
+						<span class="mui-icon mui-icon-location"></span>收货地址
+					</span>
+				</div>
+				<div class="mui-card-content">
+					<p>收货人：沫沫加水&nbsp;联系电话：12312312345</p>
+					<p>收货地址：河北省 承德市 双滦区 双塔山山顶上的塔顶</p>
+				</div>
+			</div>
+			<div class="mui-card" v-for="el in prolist">
+				<div class="mui-card-header">
+					<span>
+						<span class="mui-icon mui-icon-contact"></span>
+						<span>{{el.name}}</span>
+						<span>{{el.school}}</span>
+					</span>
+				</div>
+				<div class="mui-card-content">
+					<div class="mui-col-sm-2">
+					    <img :src="el.headImg"/>
+			        </div>
+			        <div class="mui-col-sm-10">
+		            	<span>{{el.body1}}</span>
+		            	<p class="sp8">{{el.body2}}</p>
+						<p><span class="sp4">{{el.price1}}</span>
+			        </div>
+				</div>
+			</div>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <div class="mui-col-xs-8">
+			        合计：
+	        </div>
+	        <div class="mui-col-xs-4" id="go">
+	   	        <button>立即下单</button>
+	        </div>
+		</nav> 
+	</body>
+	<script src="js/vue2.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var vn = new Vue({
+			el: '#list',
+			data: {
+				prolist:[]
+			}
+		});
+		mui.getJSON('js/Card.json',function(data){
+			    vn.prolist = data.list;
+		});
+		
+		
+		
+	mui.init();
+			(function($) {
+				var go = ['确认', '取消'];
+				$('#go').on('tap', 'button', function(event) {
+					var elem = this;
+					var li = elem.parentNode.parentNode;
+					mui.confirm('下单成功，立即支付？', '系统提示', go, function(e) {
+						if (e.index == 0) {
+							mui.openWindow({
+						    url: 'F.dingdanzhifu.html', 
+						    id:'info'
+						  });
+						} else {
+							setTimeout(function() {
+								$.swipeoutClose(li);
+							}, 0);
+					 	}
+					});
+				});
+			})(mui);
+	</script>
+</html>

@@ -1,0 +1,53 @@
+.mui-icon{
+	color: red;
+}
+.mui-card{
+	width: 100%;
+	margin-left: 0px;
+}
+.mui-card-content{
+	margin: 10px;
+}
+li{
+	list-style: none;
+}
+.sp4{
+	color: red;
+	font-size: 20px;
+}
+.sp8{
+	font-size: 13px;
+}
+.sp7{
+	float: right;
+	margin-right: 15px;
+	color: red;
+	margin-top: -35px;
+}
+.sp6{
+	font-size: 11px;
+}
+.sp8{
+	margin-top: 7px;
+}
+/*底栏*/
+.mui-row{
+	width: 100%;
+}
+.mui-col-xs-8{
+	padding-top: 15px;
+	text-align: center;
+	height: 100%;
+	float: left;
+}
+.mui-col-xs-4{
+	float: left;
+	background: red;
+	height: 100%;
+}
+.mui-col-xs-4 button{
+	width: 100%;
+	height: 100%;
+	background: red;
+	color: white;
+}

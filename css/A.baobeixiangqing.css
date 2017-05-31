@@ -1,0 +1,65 @@
+.mui-icon{
+	color: red;
+}
+.mui-icon-redo{
+	float: right;
+}
+.demo1{
+	margin: 10px 0px;
+	background: white;
+	padding: 20px;
+	overflow: hidden;
+}
+.sub1{
+	float: left;
+	width: 25%;
+}
+.sub1 img{
+	width: 80%;
+}
+.sub2{
+	margin: 20px;
+	float: left;
+}
+.mui-card{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.mui-card-header{
+	position: static;
+}
+.mui-content{
+	margin-bottom: 60px;
+}
+.mui-row{
+	width: 100%;
+}
+.mui-col-xs-2 img{
+	width: 100%;
+	border-radius:50px;
+}
+.mui-col-xs-9{
+	margin-left: 20px;
+	margin-top: 10px;
+}
+.pic{
+	text-align: center;
+}
+li img{
+	border-radius: 50px;
+}
+#nanbo1{
+	text-align: left;
+	color: red;
+	padding-left: 20px;
+}
+#nanbo2{
+	background: red;
+	color: white;
+	width: 1px;
+	font-size: 12px;
+}
+.mui-popover.mui-popover-action .mui-table-view{
+	color: black;
+}
+

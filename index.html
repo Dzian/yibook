@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/icons-extra.css"/>
+    <link rel="stylesheet" type="text/css" href="css/1.shouye.css"/>
+	<script src="js/mui.min.js"></script>
+    <script src="js/common.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    
+</head>
+<body>
+	<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item mui-active" href="sub1.html">
+	        <span class="mui-icon mui-icon-home"></span>
+	        <span class="mui-tab-label">首页</span>
+	    </a>
+	    <a class="mui-tab-item" href="sub2.html">
+	        <span class="mui-icon mui-icon-bars"></span>
+	        <span class="mui-tab-label">分类</span>
+	    </a>
+	    <a class="mui-tab-item" href="sub3.html">
+	        <span class="mui-icon mui-icon-search"></span>
+	        <span class="mui-tab-label">发现</span>
+	    </a>
+	    <a class="mui-tab-item" id="sub4">
+	        <span class="mui-icon mui-icon-person mui-icon-mic-person"></span>
+	        <span class="mui-tab-label">我的</span>
+	    </a>
+	</nav>
+	
+	<script type="text/javascript">
+		var subPages=['sub1.html','sub2.html','sub3.html'];
+//		样式
+		var subPageStyle={
+			top:'0px',
+			bottom:'50px'
+		}
+		
+//		硬件系统准备;回调函数
+		mui.plusReady(function(){
+//			                  硬件。窗体。
+			var self=plus.webview.currentWebview();
+			for (var i=0;i<subPages.length;i++){
+				var sub=plus.webview.create(subPages[i],subPages[i],subPageStyle);
+//				隐藏
+				sub.hide();
+//				添加至主窗体
+				self.append(sub);
+			}
+//			设置主页面
+			plus.webview.show("sub1.html");
+		})
+		
+//		touch切换
+//      监听
+        mui(".mui-bar-tab").on("tap","a",function(e){
+			var tagPageId=this.getAttribute("href");
+		    plus.webview.show(tagPageId);
+			});
+			
+		document.getElementById('sub4').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: 'login.html', 
+				    id:'login'
+				  });
+			});
+    </script>
+    
+</body>
+</html>

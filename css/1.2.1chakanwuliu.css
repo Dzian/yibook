@@ -1,0 +1,35 @@
+.mui-icon-left-nav{
+	color: red;
+}
+.demo1{
+	overflow: hidden;
+	background: white;
+}
+.sub2{
+	float: left;
+	width: 75%;
+}
+.sub1{
+	float: left;
+	width: 15%;
+	margin: 10px;
+}
+.sub1 img{
+	width: 100%
+}
+.sp1{
+	color: black;
+}
+p{
+	margin: 0px;
+}
+.sub3{
+	float: left;
+	width: 10%;
+}
+.sub3 img{
+	width: 100%;
+}
+.mui-table-view-cell{
+	margin-top:15px ;
+}

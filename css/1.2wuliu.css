@@ -1,0 +1,27 @@
+.mui-icon-left-nav{
+	color: red;
+}
+.mui-card{
+	width: 100%;
+	margin-left: 0px;
+}
+.sp2{
+	color: darkgrey;
+	font-size: 13px;
+}
+.demo1{
+	width: 10%;
+	margin: 10px;
+	float: left;
+}
+.demo1 img{
+	width: 100%;
+}
+.demo2{
+	float: left;
+	width: 80%;
+}
+
+.sp3{
+	color: black;
+}

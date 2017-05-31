@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/1.2wuliu.css"/>
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">交易物流消息</h1>
+		</header>
+		
+		<div class="mui-content">
+		    <div class="mui-card">
+				<div class="mui-card-header">
+					<span>订单已签收</span>
+					<span class="sp2">(中通快递)</span>
+				</div>
+				<div class="mui-card-content" id="chakan">
+					<div class="demo1">
+						<img src="images/header.png"/>
+					</div>
+					<div class="demo2">
+						<p class="sp3">智慧树</p>
+						<p>运单编号：1234567890</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="mui-card">
+				<div class="mui-card-header">
+					<span>订单未签收</span>
+					<span class="sp2">(顺丰快递)</span>
+				</div class="sp2">
+				<div class="mui-card-content" id="chakan2">
+					<div class="demo1">
+						<img src="images/header.png"/>
+					</div>
+					<div class="demo2">
+						<p class="sp3">考研数学</p>
+						<p>运单编号：0121231231</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+    <script type="text/javascript">
+		document.getElementById('chakan').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: '1.2.1chakanwuliu.html', 
+				    id:'login'
+				  });
+			});
+		document.getElementById('chakan2').addEventListener('tap', function() {
+				mui.openWindow({
+				    url: '1.2.1chakanwuliu.html', 
+				    id:'login'
+				  });
+			});
+    </script>
+</html>

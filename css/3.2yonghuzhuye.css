@@ -1,0 +1,96 @@
+.mui-pull-left{
+	color: red;
+}
+#ko{
+	/*border: 1px solid red;*/
+	margin-top: 45px;
+	width: 100%;
+	height: 800px;
+}
+.rty {
+	border: 1px solid red;
+	width: 100px;
+}
+.mui-media{
+	/*border: 1px solid red;*/
+	width: 100%;
+}
+.mui-icon-contact{
+	color: red;
+	font-size: 20px;
+	margin-top: 10px;
+}
+.qwe{
+	font-size: ;
+}
+.mui-card{
+	margin: 0px;
+	width: 100%;
+}
+
+.mui-table-view .mui-media-object{
+	max-width: px;
+}
+.xcv{
+	font-size: 20px;
+	color: #BBBBBB;
+}
+#btn{
+	float: left;
+	margin-top: 10px;
+	/*width: 80px;*/
+}
+#btn1{
+	margin-top: 10px;
+	/*margin-left: 10px;*/
+
+}
+button{
+	width: 60px;
+	height: 30px;
+
+}
+.mui-btn{
+	font-size: 12px;
+
+}
+#btn button{
+	color: red;
+	border: 1px solid red;
+}
+
+.mui-col-sm-2{
+	padding: 10px;
+	float: left;
+	width: 35%;
+}
+.mui-col-sm-10{
+	float: left;
+	width: 65%;
+}
+li{
+	list-style: none;
+}
+.sp4{
+	color: red;
+	font-size: 20px;
+}
+.sp8{
+	font-size: 13px;
+}
+.sp7{
+	float: right;
+	margin-right: 15px;
+	color: red;
+	margin-top: -35px;
+}
+.sp6{
+	font-size: 11px;
+}
+.sp8{
+	margin-top: 7px;
+}
+.mui-card{
+	margin-top: 10px;
+}
+

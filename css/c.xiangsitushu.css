@@ -1,0 +1,77 @@
+.mui-row .mui-col-xs-3 li{
+	padding-top:6px;
+	height: 60px;
+	}
+.mui-row .mui-navigate{
+	text-align: center;
+}
+#sp1{
+	color: black;
+	padding-top:6px ;
+}
+#sp2{
+	color: gray;
+	padding-bottom:9px ;
+	
+}
+.mui-content img{
+	width: 100%;
+	margin-bottom: -8px;
+	margin-top: -5px;
+}
+.mui-content{
+	overflow: hidden;
+	margin-bottom: 7px;
+}
+.little{
+	min-height: 100px;
+}
+.mui-icon-left-nav{
+	color: red;
+}
+.mui-card{
+	width: 100%;
+	margin-left: 0px;
+}
+.sp2{
+	color: darkgray;
+	font-size: 14px;
+}
+.sp3{
+	color: red;
+	font-size: 12px;
+}
+#im1 img{
+	width: 100%;
+}
+.mui-col-sm-2{
+	padding: 10px;
+	float: left;
+	width: 35%;
+}
+.mui-col-sm-10{
+	float: left;
+	width: 65%;
+}
+li{
+	list-style: none;
+}
+.sp4{
+	color: red;
+	font-size: 20px;
+}
+.sp8{
+	font-size: 13px;
+}
+.sp7{
+	float: right;
+	margin-right: 15px;
+	color: red;
+	margin-top: -35px;
+}
+.sp6{
+	font-size: 11px;
+}
+.sp8{
+	margin-top: 7px;
+}

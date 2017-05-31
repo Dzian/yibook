@@ -1,0 +1,44 @@
+/*默认样式*/
+			.mui-row.mui-fullscreen>[class*="mui-col-"] {
+				height: 100%;
+			}
+			.mui-col-xs-3,
+			.mui-control-content {
+				overflow-y: auto;
+				height: 100%;
+			}
+			.mui-segmented-control .mui-control-item {
+				line-height: 45px;
+				width: 100%;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+				background-color: whitesmoke;
+			}
+
+.mui-col-xs-3{
+	background: white;
+	border-right: 0px;
+}
+#right{
+	padding: 10px;
+}
+#pic img{
+	height: 110px;
+	width: 100%;
+}
+.mui-col-xs-9{
+	padding: 10px;
+}
+#row2{
+	background: #fff;
+	text-align: center;	
+}
+a{
+	color: black;
+}
+.mui-icon-extra{
+	color: red;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+		color: black;
+	}

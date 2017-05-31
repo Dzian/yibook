@@ -1,0 +1,56 @@
+.mui-icon-left-nav{
+	color: red;
+}
+.mui-search{
+	margin: 15px;
+}
+.sub1{
+	background: white;
+	border: 1px solid white;
+}
+.card{
+	background: white;
+}
+.mui-slider img{
+	height: 60%;
+	height: 70px;
+}
+.header{
+	border-left: 5px solid yellow;
+	margin-left: 20px;
+	border-bottom: 0px;
+	padding: 10px;
+	color: darkgray;
+}
+.content{
+	overflow: hidden;
+	margin-top: 5px;
+}
+.mui-col-sm-6{
+	width: 47%;
+}
+.mui-col-sm-6 img{
+	width: 100%;
+}
+p{
+	margin-left: 10px;
+}
+.word1{
+	font-weight: 200px;
+	color: black;
+}
+.card{
+	margin-top: 10px;
+}
+.sub41{
+	width: 25%;
+	margin: 10px;
+	float: left;
+}
+.sub41 img{
+	width: 100%;
+}
+.sub42{
+	font-size: 12px;
+	margin-top: 10px;
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+		<style type="text/css">
+			.mui-col-xs-4 img{
+				width: 50%;
+			}
+			.mui-col-xs-8 img{
+				width: 20%;
+			}
+			#tit{
+				background: white;
+				padding: 8px;
+				margin-top: 20px;
+			}
+		</style>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <h1 class="mui-title">发现</h1>
+		</header>
+		
+		<div class="mui-content" id="people">
+			    <div class="mui-slider" id="app">
+	        		<div class="mui-slider-group mui-slider-loop">
+					    <div class="mui-slider-item mui-slider-item-duplicate">
+					    	<a href="#"><img :src="imgfirst"/></a>
+					    </div>
+					    <div class="mui-slider-item" v-for="img in imglist"> 
+					    	<a href="#"><img :src="img.imgURL"/></a>
+					    </div>
+					    <div class="mui-slider-item mui-slider-item-duplicate">
+					    	<a href="#"><img :src="imglast"/></a>
+					    </div>
+					</div>
+	       			<div class="mui-slider-indicator">
+	        			<div class="mui-indicator mui-active"></div>
+	        			<div class="mui-indicator"></div>
+	        			<div class="mui-indicator"></div>
+	        			<div class="mui-indicator"></div>
+	      			</div>
+       		</div>
+		
+		
+		        <ul class="mui-table-view mui-grid-view mui-grid-9" style="background: white;margin-top: 10px;" id="gxqdr">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-8 ">
+		                    <span><img src="images/1.png" /> </span>
+		                    <div class="mui-media-body">可能认识的人</div></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                    <span><img src="images/2.png" /> </span>
+		                    <div class="mui-media-body">好友</div></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
+		                    <span><img src="images/3.png" /> </span>
+		                    <div class="mui-media-body">同圈子的人</div></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                     <span><img src="images/4.png" /> </span>
+		                    <div class="mui-media-body">同学</div></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4">
+		                     <span><img src="images/5.png" /> </span>
+		                    <div class="mui-media-body">老乡</div></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4"style="height: 192px;line-height: calc(90px); float: left;">
+		                    <span><img src="images/6.png" /> </span>
+		                    <div class="mui-media-body">喜欢同类书</div></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
+		                    <span><img src="images/7.png" /> </span>
+		                    <div class="mui-media-body">同学校</div></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
+		                    <span><img src="images/8.png" /> </span>
+		                    <div class="mui-media-body">活跃的人</div></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4"style="float: left;">
+		                   <span><img src="images/9.png"/> </span>
+		                    <div class="mui-media-body">同专业</div></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4"style="display: none;">
+		                    <span class="mui-icon mui-icon-gear"></span>
+		                    <div class="mui-media-body">Setting</div></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 "style="float: left;">
+		                     <span><img src="images/10.png"> </span>
+		                    <div class="mui-media-body">其他</div></li>
+		        </ul> 
+		
+		
+		
+			<div id="tit">
+				<span><img src="images/1.png"/>他们可能是你感兴趣的人</span>
+			</div>
+		        <ul class="mui-table-view mui-grid-view mui-grid-9" style="background: white;">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in people">
+		            	<a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name}}</div>
+		            	</a> 
+		            </li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in people"> 
+		            	<a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name}}</div>
+		            	</a>  
+		            </li> 
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in people">
+		            	<a href="#"> 
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name}}</div>
+		            	</a> 
+		            </li>
+		        </ul> 
+		
+			<div id="tit">
+				<span><img src="images/1.png"/>他们可能是你的同学</span>
+			</div>
+		        <ul class="mui-table-view mui-grid-view mui-grid-9" style="background: white;"> 
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name1}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name2}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name3}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name4}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span> 
+		                    <div class="mui-media-body">{{el.name5}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name6}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name7}}</div></a></li>
+		           <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name8}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name9}}</div></a></li>
+		        </ul> 
+		
+			<div id="tit">
+				<span><img src="images/1.png"/>他们可能是你的老乡</span>
+			</div>
+		        <ul class="mui-table-view mui-grid-view mui-grid-9" style="background: white;"> 
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name1}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name2}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name3}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name4}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span> 
+		                    <div class="mui-media-body">{{el.name5}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name6}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name7}}</div></a></li>
+		           <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name8}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name9}}</div></a></li>
+		        </ul> 
+			<div id="tit">
+				<span><img src="images/1.png"/>他们可能是你同专业的人</span>
+			</div>
+		        <ul class="mui-table-view mui-grid-view mui-grid-9" style="background: white;"> 
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name1}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name2}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name3}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name4}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span> 
+		                    <div class="mui-media-body">{{el.name5}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name6}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                    <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name7}}</div></a></li>
+		           <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name8}}</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" v-for="el in classmate"><a href="#">
+		                   <span><img :src="img"/></span>
+		                    <div class="mui-media-body">{{el.name9}}</div></a></li>
+		        </ul> 
+		</div>
+	</body>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				imglist:[],
+				imgfirst:'',
+				imglast:'',
+				people:[]
+			}
+		}); 
+		mui.getJSON('js/Lunbo.json',function(data){
+				vm.imglist = data.data;
+				vm.imgfirst = data.imgfirst;
+				vm.imglast = data.imglast;
+				vm.people = data.people;
+				vm.$nextTick(function() { 
+					var gallery = mui('.mui-slider');
+				gallery.slider({
+					interval:1500
+				});
+				})
+			}
+		);
+		var vn = new Vue({
+			el: '#people',
+			data: {
+				people:[],
+				img:'',
+				classmate:[]
+			}
+		}); 
+		mui.getJSON('js/People.json',function(data){
+				vn.people = data.people; 
+				vn.img = data.img; 
+				vn.classmate = data.classmate; 
+//				alert(vn.classmate)
+			}
+		);
+
+		
+		
+		document.getElementById('tit').addEventListener('tap', function() {
+		  mui.openWindow({
+		    url: '3.1kenengganxingquderen.html', 
+		    id:'info'
+		  });
+		});
+		
+		mui(".mui-grid-9").on('tap','.mui-col-sm-4',function(){
+			var id = this.getAttribute("id");
+			mui.openWindow(
+				{ 
+					id:'detail',
+					url:'3.2yonghuzhuye.html' 
+				});
+		})
+		
+		mui("#gxqdr").on('tap','li',function(){
+			var id = this.getAttribute("id");
+			mui.openWindow(
+				{ 
+					id:'detail',
+					url:'3.1kenengganxingquderen.html' 
+				});
+		})
+	</script>
+	
+</html>

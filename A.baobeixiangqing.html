@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/A.baobeixiangqing.css"/>
+	</head>
+<style type="text/css">
+			.mui-preview-image.mui-fullscreen {
+				position: fixed;
+				z-index: 2;
+				background-color: #000;
+			}
+			.mui-preview-header,
+			.mui-preview-footer {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				z-index: 20;
+			}
+			.mui-preview-header {
+				left: 20px;
+				height: 44px;
+				top: 44px;
+			}
+			.mui-preview-footer {
+				height: 50px;
+				bottom: 0px;
+			}
+			.mui-preview-header .mui-preview-indicator {
+				display: block;
+				line-height: 25px;
+				color: #fff;
+				text-align: left;
+				margin: 15px auto 4;
+				width: 70px;
+				background-color: rgba(0, 0, 0, 0.4);
+				border-radius: 12px;
+				font-size: 16px;
+			}
+			.mui-preview-image {
+				display: none;
+				-webkit-animation-duration: 0.5s;
+				animation-duration: 0.5s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+			}
+			.mui-preview-image.mui-preview-in {
+				-webkit-animation-name: fadeIn;
+				animation-name: fadeIn;
+			}
+			.mui-preview-image.mui-preview-out {
+				background: none;
+				-webkit-animation-name: fadeOut;
+				animation-name: fadeOut;
+			}
+			.mui-preview-image.mui-preview-out .mui-preview-header,
+			.mui-preview-image.mui-preview-out .mui-preview-footer {
+				display: none;
+			}
+			.mui-zoom-scroller {
+				position: absolute;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+				-webkit-box-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				-webkit-backface-visibility: hidden;
+			}
+			.mui-zoom {
+				-webkit-transform-style: preserve-3d;
+				transform-style: preserve-3d;
+			}
+			.mui-slider .mui-slider-group .mui-slider-item img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+				width: 100%;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+				display: inline-table;
+			}
+			.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+				display: table-cell;
+				vertical-align: middle;
+			}
+			.mui-preview-loading {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: none;
+			}
+			.mui-preview-loading.mui-active {
+				display: block;
+			}
+			.mui-preview-loading .mui-spinner-white {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -25px;
+				margin-top: -25px;
+				height: 50px;
+				width: 50px;
+			}
+			.mui-preview-image img.mui-transitioning {
+				-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+				transition: transform 0.5s ease, opacity 0.5s ease;
+			}
+			@-webkit-keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@keyframes fadeIn {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			@keyframes fadeOut {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0;
+				}
+			}
+			/*p img {
+				max-width: 100%;
+				height: auto;
+			}*/
+		</style>
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">宝贝详情</h1>
+		    <a href="#forward"><span class="mui-icon mui-icon-redo" onclick="shareHref()"></span></a>
+		</header>
+		<div class="mui-content">
+		    <div class="demo1">
+		    	<div class="sub1">
+		    		<img src="images/addPho.png"/>
+		    	</div>
+		    	<div class="sub2">
+		    		<span>爷爷的盗墓笔记</span>
+		    	</div>
+		    </div>
+		    <div class="mui-card">
+				<div class="mui-card-header" >
+					<div class="mui-row">
+				        <div class="mui-col-xs-2">
+					        <li class="mui-table-view">
+					            <img src="images/header.png"/>
+			                </li>
+				        </div>
+				        <div class="mui-col-xs-9">
+				            <li class="mui-table-view">
+				                <span>胖子</span>
+				                <p>2017-02-23 12：23：12</p>
+				            </li>
+				        </div>
+				   </div>
+				</div>
+				<div class="mui-card-content">
+					<div class="pic">
+						<div class="mui-content-padded">
+					    	<div><img src="images/book444.jpg" data-preview-src="" data-preview-group="1"/></div>
+					    	<div><img src="images/book333.jpg" data-preview-src="" data-preview-group="1"/></div>
+					    	<div><img src="images/book333.jpg" data-preview-src="" data-preview-group="1"/></div>
+					    	<div><img src="images/book444.jpg" data-preview-src="" data-preview-group="1"/></div>
+					    </div>
+				    </div>
+				</div>
+			</div>
+			<span>留言</span>
+		    <ul class="mui-table-view">
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/header.png">
+			            <div class="mui-media-body">
+			                闷油瓶
+			                <p class="mui-ellipsis">我是一个没有过去和未来的人，我做的所有的事，就是想找到我和这个世界的联络。我从哪里来，我为什么会在这里？</p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/header.png">
+			            <div class="mui-media-body">
+			                无邪
+			                <p class="mui-ellipsis">你带着这个东西，来到青铜门前，门就会打开。十年之后，如果你还记得我，你可以带着这个东西</p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/header.png">
+			            <div class="mui-media-body">
+			                胖子
+			                <p class="mui-ellipsis">我的眼泪就留下来，我回到自己的铺子，恍如回到了当年，什么都还都没有发生的时候 </p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/header.png">
+			            <div class="mui-media-body">
+			                潘子
+			                <p class="mui-ellipsis">我意识到自己还不能停，我还必须走下去，因为还有一个十年。</p>
+			            </div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:;">
+			            <img class="mui-media-object mui-pull-left" src="images/header.png">
+			            <div class="mui-media-body">
+			                张三醒
+			                <p class="mui-ellipsis">"带我回家"。说着，头也不回地向外走去</p>
+			            </div>
+			        </a>
+			    </li>
+			</ul>
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item" id="nanbo1">
+		        <span class="mui-icon mui-icon-chatboxes"></span>
+		        <span class="mui-tab-label">留言</span>
+		    </a>
+		    <a class="mui-tab-item" id="nanbo2">
+		        <span class="mui-tab-label">聊一聊</span>
+		    </a>
+		</nav>
+		<!--<div id="forward" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">发送给微信好友</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">分享到微信朋友圈</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">分享到新浪微博</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">分享到腾讯微博</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">分享到QQ</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#forward"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>-->
+
+	</body>
+	<script src="js/mui.previewimage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.zoom.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+		document.getElementById('nanbo1').addEventListener('tap', function() {
+		  mui.openWindow({
+		    url: 'B.liuyan.html', 
+		  });
+		});
+		mui.previewImage();
+		
+    </script>
+    <script>
+
+        mui.init({
+            swipeBack:true //启用右滑关闭功能
+        });
+
+        var Intent = null,
+            File = null,
+            Uri = null,
+            main = null;
+        var shares = null;
+        var shareImageUrl = '';
+        mui.plusReady(function() {  
+            updateSerivces();
+            if (plus.os.name == "Android") {
+                Intent = plus.android.importClass("android.content.Intent");
+                File = plus.android.importClass("java.io.File");
+                Uri = plus.android.importClass("android.net.Uri");
+                main = plus.android.runtimeMainActivity();
+            }
+        })
+        /**
+         * 更新分享服务
+         */
+        function updateSerivces() {
+            plus.share.getServices(function(s) {
+                shares = {};
+                for (var i in s) {
+                    var t = s[i];
+                    shares[t.id] = t;
+                }
+                outSet("获取分享服务列表成功");
+            }, function(e) {
+                outSet("获取分享服务列表失败：" + e.message);
+            });
+        }
+        /**
+         * 分享操作
+         */
+        function shareAction(id, ex) {
+            var s = null;
+            if (!id || !(s = shares[id])) {
+                outLine("无效的分享服务！");
+                return;
+            }
+            if (s.authenticated) {
+                outSet("---已授权---");
+                shareMessage(s, ex);
+            } else {
+                outSet("---未授权---");
+                s.authorize(function() {
+                    shareMessage(s, ex);
+                }, function(e) {
+                    outLine("认证授权失败");
+                });
+            }
+        }
+        /**
+         * 发送分享消息
+         */
+        function shareMessage(s, ex) {
+            var msg = {
+                content: '分享-详情',
+                href: 'http://blog.csdn.net/zhuming3834',
+                title: 'HGDQ-分享测试-title',
+                content: 'HGDQ-分享测试-content',
+                thumbs: ['http://img3.3lian.com/2013/v10/4/87.jpg'],
+                pictures: ['http://img3.3lian.com/2013/v10/4/87.jpg'],
+                extra: {
+                    scene: ex
+                }
+            };
+            s.send(msg, function() {
+                outLine("分享成功!");
+            }, function(e) {
+                outLine("分享失败!");
+            });
+        }
+        /**
+         * 分享按钮点击事件
+         */
+        function shareHref() {
+            var ids = [{
+                    id: "weixin", 
+                    ex: "WXSceneSession"  /*微信好友*/
+                }, {
+                    id: "weixin",
+                    ex: "WXSceneTimeline" /*微信朋友圈*/
+                }, {
+                    id: "qq"   /*QQ好友*/
+                }, {
+                    id: "tencentweibo"   /*腾讯微博*/
+                },{
+                    id: "sinaweibo"  /*新浪微博*/
+                }],
+                bts = [{
+                    title: "发送给微信好友"
+                }, {
+                    title: "分享到微信朋友圈"
+                }, {
+                    title: "分享到QQ"
+                }, {
+                    title: "分享到腾讯微博"
+                }, {
+                    title: "分享到新浪微博"
+                }];
+            plus.nativeUI.actionSheet({
+                    cancel: "取消",
+                    buttons: bts
+                },
+                function(e) {
+                    var i = e.index;
+                    if (i > 0) {
+                        shareAction(ids[i - 1].id, ids[i - 1].ex);
+                    }
+                }
+            );
+        }       
+        // 控制台输出日志
+        function outSet(msg) {
+            console.log(msg);
+        }
+        // 界面弹出吐司提示
+        function outLine(msg) {
+            mui.toast(msg);
+        }
+    </script>
+</html>

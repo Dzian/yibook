@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/tushuliebiao.css"/>
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css"/>
+	</head>
+		<style>
+			
+			/*.mui-plus .plus{
+				display: inline;
+			}
+			
+			.plus{
+				display: none;
+			}
+			
+			#topPopover {
+				position: fixed;
+				top: 16px;
+				right: 6px;
+			}
+			#topPopover .mui-popover-arrow {
+				left: auto;
+				right: 6px;
+			}
+			p {
+				text-indent: 22px;
+			}
+			span.mui-icon {
+				font-size: 14px;
+				color: #007aff;
+				margin-left: -15px;
+				padding-right: 10px;
+			}
+			.mui-popover {
+				height: 300px;
+			}
+			.mui-content {
+				padding: 10px;
+			}*/
+		</style>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<div class="mui-content">
+            <div class="mui-card">
+				<div class="mui-card-header">
+					<img src="images/header.png"/>
+					<span>Vivien</span>
+					<span class="sp2">承德石油高专</span>
+					<div class="sp3">
+						<span class="mui-icon mui-icon-chatboxes" style="color: red;"></span>消息
+					</div>
+				</div>
+				<div class="mui-card-content">
+				        <div class="mui-col-sm-2">
+				            <li>
+				                <img src="images/bookCover.png"/>
+				            </li>
+				        </div>
+				        <div class="mui-col-sm-10">
+				            <li>
+				            	<span>HTML5程序设计</span>
+				            </li>
+				            <li>
+				            	<p class="sp8">本书首先介绍了HTML5的历史背景，新的语义标签及与以往HTML版本相比的...</p>
+				            </li>
+				            <li>
+								<p><span class="sp4">￥18</span>
+								<span><s>￥59</s></span></p>
+				           </li>
+				            <li>
+								<p class="sp6">发表于2017-01-01&nbsp;14:00:32</p>
+				            </li>
+				            <li class="sp7"><span class="mui-icon-extra mui-icon-extra-heart"></span>收藏</li>
+				        </div>
+				</div>
+			</div>
+
+		
+	</body>
+    <script type="text/javascript">
+		mui(".mui-card").on('tap','.mui-card-content',function(){
+			var id = this.getAttribute("id");
+			mui.openWindow(
+				{ 
+					id:'detail',
+					url:'tushuxiangqing.html' 
+				});
+		})
+
+    </script>
+</html>

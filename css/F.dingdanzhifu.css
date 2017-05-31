@@ -1,0 +1,28 @@
+.mui-icon{
+	color: red;
+}
+body,
+			body .mui-content {
+				background-color: #fff !important;
+			}
+			#total {
+				-webkit-user-select: text;
+				text-align: right;
+				padding: 0 1em;
+				border: 0px;
+				border-bottom: 1px solid red;
+				border-radius: 0;
+				font-size: 16px;
+				width: 30%;
+				outline: none;
+			}
+			textarea{
+				margin-top: 10px;
+			}
+			.mui-btn-block{
+				padding: 8px 5px;
+			}
+#UN_WEB{
+	background: red;
+	border: red;
+}

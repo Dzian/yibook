@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sub2.css"/>
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css"/>
+	</head>
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">图书分类</h1>
+		</header>
+		<div class="mui-content mui-row mui-fullscreen">
+			<div class="mui-col-xs-3">
+				<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+					<a class="mui-control-item mui-active" href="#content1">
+						<span>计算机</span>
+					</a>
+					<a class="mui-control-item" href="#content2">
+						<span>艺术</span>
+					</a>
+					<a class="mui-control-item" href="#content3">
+						<span>经济管理</span>
+					</a>
+					<a class="mui-control-item" href="#content4">
+						<span>教育</span>
+					</a>
+					<a class="mui-control-item" href="#content5">
+						<span>文学</span>
+					</a>
+					<a class="mui-control-item" href="#content6">
+						<span>少儿</span>
+					</a>
+					<a class="mui-control-item" href="#content7">
+						<span>医学</span>
+					</a>
+					<a class="mui-control-item" href="#content8">
+						<span>法律</span>
+					</a>
+				</div>
+			</div>
+			
+			<div  class="mui-col-xs-9">
+				<div id="pic">
+				    <img src="images/12.jpg"/>
+			    </div>
+			    <span>计算机</span>
+			    <div class="mui-row" id="row2">
+			        <div class="mui-col-xs-4">
+				        <span class="mui-icon mui-icon-extra mui-icon-extra-xiaoshuo"></span>
+				        <div>教材</div>
+				    </div>
+				    <div class="mui-col-xs-4">
+				        <span class="mui-icon-extra mui-icon-extra-xiaoshuo"></span>
+				        <div>图形图片</div>
+				    </div>
+				    <div class="mui-col-xs-4">
+				        <span class="mui-icon-extra mui-icon-extra-xiaoshuo"></span>
+				        <div>硬件</div>
+				    </div>
+				    <div class="mui-col-xs-4">
+				        <span class="mui-icon-extra mui-icon-extra-xiaoshuo"></span>
+				        <div>软件开发</div>
+				    </div>
+				    <div class="mui-col-xs-4">
+				        <span class="mui-icon-extra mui-icon-extra-xiaoshuo"></span>
+				        <div>计算机应用</div>
+				    </div>
+				    <div class="mui-col-xs-4">
+				        <span class="mui-icon-extra mui-icon-extra-xiaoshuo"></span>
+				        <div>多媒体</div>
+				    </div>
+			    </div>
+			</div>
+		</div>
+		<script>
+			document.getElementById('row2').addEventListener('tap', function() {
+		  //打开关于页面
+				  mui.openWindow({
+				    url: 'tushuliebiao.html', 
+				    id:'info'
+				  });
+				});	
+			
+			
+//			mui.init({
+//				swipeBack: true //启用右滑关闭功能
+//			});
+//			var controls = document.getElementById("segmentedControls");
+//			var contents = document.getElementById("segmentedControlContents");
+//			var html = [];
+//			var 
+//				j = 1,
+//				m = 9, //左侧选项卡数量+1
+//				n = 21; //每个选项卡列表数量+1
+//			for (; i < m; i++) {
+//				html.push('<a class="mui-control-item" href="#content' + i + '">'+ i + '</a>');
+//			}
+//			
+//			controls.innerHTML = html.join('');
+//			html = [];
+//			contents.innerHTML = html.join('');
+//			 //默认选中第一个
+//			controls.querySelector('.mui-control-item').classList.add('mui-active');
+//			contents.querySelector('.mui-control-content').classList.add('mui-active');
+			
+			
+
+		</script>
+	</body>
+
+</html>

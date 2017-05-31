@@ -1,0 +1,105 @@
+.mui-icon-left-nav{
+	color: red;
+}
+.mui-icon{
+	color: red;
+}
+.mui-icon-redo{
+	float: right;
+}
+.sub1{
+	float: left;
+}
+.sub2{
+	float: left;
+}
+.demo1{
+	background: white;
+	padding: 10px;
+	padding: 10px;
+	overflow: auto;
+}
+.sub1{
+	width: 20%;
+}
+.sub1 img{
+	width: 100%;
+}
+.sub2{
+	padding: 10px;
+}
+p{
+	margin-top: 10px;
+}
+.mui-card{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.mui-col-xs-2 img{
+	width: 100%;
+	border-radius:50px ;
+}
+.mui-col-xs-9{
+	margin-left: 10px;
+}
+.mui-col-xs-4 img{
+	width: 80%;
+	margin: 10px;
+}
+
+.mui-card-content{
+	margin-bottom: 40px;
+}
+.mui-bar-tab{
+	border-radius: 5px;
+	margin: auto;
+	text-align: center;
+}
+button{
+	margin: 5px 10px;
+	color: white;
+	background: red;
+	width: 95%;
+}
+.mui-card-header{
+	position: static;
+}
+.mui-popover.mui-popover-action .mui-table-view{
+	color: black;
+}
+/*弹出部分*/
+
+#sheet1{
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+	height:300px;
+    z-index: 999;
+    text-align: center;
+}
+#tc{
+	text-align: center;
+    position: absolute;
+    z-index: 100001;
+    margin-top: 85px;
+    left: 20%;
+}
+#tc1,h6{
+	color: gold;
+}
+#tc>div{
+	margin-top: 25px;
+}
+.mui-icon-close{
+	color: white;
+	font-size: 50px;
+	}
+.mui-popover-arrow
+{
+	display: none;
+}
+.mui-backdrop {
+    background-color: rgba(0,0,0,.8);
+}
+#nav{
+	display: none;
+}

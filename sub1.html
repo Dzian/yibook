@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/1.shouye.css"/>
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css"/>
+		<script src="js/shouye.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+    <script type="text/javascript">
+        var mt = 0;
+        window.onload = function () {
+            var mydiv = document.getElementById("mydiv");
+            var mt = mydiv.offsetTop;
+            window.onscroll = function () {
+                var t = document.documentElement.scrollTop || document.body.scrollTop;
+                if (t > mt) {
+                	mydiv.style.display="block"
+                    mydiv.style.position = "fixed";
+                    mydiv.style.margin = "0";
+                    mydiv.style.top = "45px";
+                    mydiv.style.zIndex="9";
+                    mydiv.style.width="100%";
+                }
+                else {
+                	mydiv.style.display="none";
+                    mydiv.style.margin = "20px 0";
+                    mydiv.style.position = "static";
+                }
+            }
+        }
+        
+    </script>
+    <script src="js/common.js"></script>
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		
+	<header class="mui-bar mui-bar-nav">
+	        <span class="mui-icon mui-icon-extra mui-icon-extra-sweep" id="erweima"></span>
+	        <span class="mui-icon mui-icon-extra mui-icon-extra-notice" id="notice"><span class="mui-badge mui-badge-red"></span></span>
+	    <h1 class="mui-title">搜索你关注的商品</h1>
+	</header>
+	<div class="mui-content">
+	    <!--轮播图-->
+		<div>
+			<div class="mui-content">
+			    <div class="mui-slider">
+	        		<div class="mui-slider-group mui-slider-loop">
+					    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/14.jpg"/></a></div>
+					    <div class="mui-slider-item"><a href="#"><img src="images/11.jpg" /></a></div>
+					    <div class="mui-slider-item"><a href="#"><img src="images/12.jpg" /></a></div>
+					    <div class="mui-slider-item"><a href="#"><img src="images/13.jpg" /></a></div>
+					    <div class="mui-slider-item"><a href="#"><img src="images/14.jpg" /></a></div>
+					    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="images/11.jpg" /></a></div>
+					</div>
+	       			<div class="mui-slider-indicator">
+	        			<div class="mui-indicator mui-active"></div>
+	        			<div class="mui-indicator"></div>
+	        			<div class="mui-indicator"></div>
+	        			<div class="mui-indicator"></div>
+	      			</div>
+       			</div>
+			</div>
+		</div>
+		<!--隐藏部分-->
+        <div class="mui-content">
+            <div class="mui-row" class="mui-content" id="mydiv">
+                <div class="mui-col-xs-3 fabu" style="border-right: 1px solid lightgray;text-align: center;color: crimson;">
+                    <li class="mui-table-view">
+                    	<span class="mui-icon mui-icon-compose"></span><br />
+                        <a class="mui-navigate" style="color: black;">
+                    一键发布    
+                        </a>
+                    </li>
+                </div>
+                <div class="mui-col-xs-3 wuliu" style="border-right: 1px solid lightgray;text-align: center;color: crimson;">
+                    <li class="mui-table-view">
+                    	<span class="mui-icon mui-icon-extra mui-icon-extra-express"></span><br />
+                        <a class="mui-navigate" style="color: black;">
+                    物流查询
+                        </a>
+                    </li>
+                </div>
+                <div class="mui-col-xs-3 yishu" style="border-right: 1px solid lightgray;text-align: center;color: crimson;" id="yishu1">
+                    <li class="mui-table-view">
+                    	<span class="mui-icon mui-icon-refresh"></span><br />
+                        <a class="mui-navigate" style="color: black;">
+                    以书易书
+                        </a>
+                    </li>
+                </div>
+                <div class="mui-col-xs-3 quanzi" style="border-right: 1px solid lightgray;text-align: center;color: crimson;">
+                    <li class="mui-table-view">
+                    	<span class="mui-icon mui-icon-extra mui-icon-extra-peoples"></span><br />
+                        <a class="mui-navigate" style="color: black;">
+                    我的圈子
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <!--栅格4-->
+        <div class="mui-content">
+            <div class="mui-row" class="mui-content" >
+                <div class="mui-col-xs-3 fabu" style="padding-right: 1px;text-align: center;color: crimson;">
+                    <li class="mui-table-view">
+                    	<span class="mui-icon mui-icon-compose"></span><br />
+                        <a class="mui-navigate" style="color: black;">
+                    发布    
+                        </a>
+                    </li>
+                </div>
+                <div class="mui-col-xs-3 wuliu" style="padding-right: 1px;text-align: center;color: crimson;">
+                    <li class="mui-table-view">
+                    	<span class="mui-icon mui-icon-extra mui-icon-extra-express"></span><br />
+                        <a class="mui-navigate" style="color: black;">
+                    物流
+                        </a>
+                    </li>
+                </div>
+                <div class="mui-col-xs-3 yishu" style="padding-right: 1px;text-align: center;color: crimson;" id="yishu2">
+                    <li class="mui-table-view">
+                    	<span class="mui-icon mui-icon-refresh"></span><br />
+                        <a class="mui-navigate" style="color: black;">
+                    换书
+                        </a>
+                    </li>
+                </div>
+                <div class="mui-col-xs-3 quanzi" style="padding-right: 1px;text-align: center;color: crimson;">
+                    <li class="mui-table-view">
+                    	<span class="mui-icon mui-icon-extra mui-icon-extra-peoples"></span><br />
+                        <a class="mui-navigate" style="color: black;">
+                    圈子
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <!--栅格2-->
+        <div class="mui-content">
+            <div class="mui-row">
+                <div class="mui-col-sm-12 mui-col-xs-7">
+                    <li class="mui-table-view">
+                        <a class="mui-navigate">
+                            <div id="sp1">我的节能减排贡献值</div>  
+                            <div id="sp2">
+                            	<span>恭喜您晋升为</span><span class="mui-badge mui-badge-success">节能小卫士</span>
+                            </div>
+                        </a>
+                    </li>
+                </div>
+                <div class="mui-col-sm-12 mui-col-xs-5">
+                    <a class="mui-navigate" id="im1">
+                    	<img src="images/jnjp.png"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--内容-->
+        <div class="mui-content">
+            <div class="mui-card" style="margin-top: 0px;">
+				<div class="mui-card-header">
+					<img src="images/header.png"/>
+					<span>Vivien</span>
+					<span class="sp2">承德石油高专</span>
+					<div class="sp3">
+						<span class="mui-icon mui-icon-chatboxes"></span>消息
+					</div>
+				</div>
+				<div class="mui-card-content">
+				        <div class="mui-col-sm-2">
+				            <li>
+				                <img src="images/bookCover.png"/>
+				            </li>
+				        </div>
+				        <div class="mui-col-sm-10">
+				            <li>
+				            	<span>HTML5程序设计</span>
+				            </li>
+				            <li>
+				            	<p class="sp8">本书首先介绍了HTML5的历史背景，新的语义标签及与以往HTML版本相比的...</p>
+				            </li>
+				            <li>
+								<p><span class="sp4">￥18</span>
+								<span><s>￥59</s></span></p>
+				           </li>
+				            <li>
+								<p class="sp6">发表于2017-01-01&nbsp;14:00:32</p>
+				            </li>
+				            <li class="sp7"><span class="mui-icon-extra mui-icon-extra-heart"></span>收藏</li>
+				        </div>
+				</div>
+			</div>
+			<div class="mui-content">
+            <div class="mui-card" style="margin-top: 0px;">
+				<div class="mui-card-header">
+					<img src="images/header.png"/>
+					<span>Vivien</span>
+					<span class="sp2">承德石油高专</span>
+					<div class="sp3">
+						<span class="mui-icon mui-icon-chatboxes"></span>消息
+					</div>
+				</div>
+				<div class="mui-card-content">
+				        <div class="mui-col-sm-2">
+				            <li>
+				                <img src="images/bookCover.png"/>
+				            </li>
+				        </div>
+				        <div class="mui-col-sm-10">
+				            <li>
+				            	<span>HTML5程序设计</span>
+				            </li>
+				            <li>
+				            	<p class="sp8">本书首先介绍了HTML5的历史背景，新的语义标签及与以往HTML版本相比的...</p>
+				            </li>
+				            <li>
+								<p><span class="sp4">￥18</span>
+								<span><s>￥59</s></span></p>
+				           </li>
+				            <li>
+								<p class="sp6">发表于2017-01-01&nbsp;14:00:32</p>
+				            </li>
+				            <li class="sp7"><span class="mui-icon-extra mui-icon-extra-heart"></span>收藏</li>
+				        </div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header">
+					<img src="images/header.png"/>
+					<span>Vivien</span>
+					<span class="sp2">承德石油高专</span>
+					<div class="sp3">
+						<span class="mui-icon mui-icon-chatboxes"></span>消息
+					</div>
+				</div>
+				<div class="mui-card-content">
+				        <div class="mui-col-sm-2">
+				            <li>
+				                <img src="images/bookCover.png"/>
+				            </li>
+				        </div>
+				        <div class="mui-col-sm-10">
+				            <li>
+				            	<span>HTML5程序设计</span>
+				            </li>
+				            <li>
+				            	<p class="sp8">本书首先介绍了HTML5的历史背景，新的语义标签及与以往HTML版本相比的...</p>
+				            </li>
+				            <li>
+								<p><span class="sp4">￥18</span>
+								<span><s>￥59</s></span></p>
+				           </li>
+				            <li>
+								<p class="sp6">发表于2017-01-01&nbsp;14:00:32</p>
+				            </li>
+				            <li class="sp7"><span class="mui-icon-extra mui-icon-extra-heart"></span>收藏</li>
+				        </div>
+				</div>
+			</div>
+       </div>       
+	</div>
+		<script type="text/javascript">
+			var gallery = mui('.mui-slider');
+				gallery.slider({
+					interval:1500//自动轮播周期，若为0则不自动播放，默认为0；
+				});
+
+		document.getElementById('erweima').addEventListener('tap', function() {
+		  mui.openWindow({
+		    url: 'barcode_scan.html', 
+		    id:'info'
+		  });
+		});		
+		
+		document.getElementById('notice').addEventListener('tap', function() {
+		  mui.openWindow({
+		    url: '1.1zhanneixin.html', 
+		    id:'info'
+		  });
+		});
+		
+		mui(".mui-card-header").on('tap','.sp3',function(){
+			var id = this.getAttribute("id");
+			mui.openWindow(
+				{ 
+					id:'detail',
+					url:'Vivien.html' 
+				});
+		})
+		
+		mui(".mui-card").on('tap','.mui-card-content',function(){
+			var id = this.getAttribute("id");
+			mui.openWindow(
+				{ 
+					id:'detail',
+					url:'tushuxiangqing.html' 
+				});
+		})
+		
+		mui(".mui-content").on('tap','.fabu',function(){
+			var id = this.getAttribute("id");
+			mui.openWindow(
+				{ 
+					id:'detail',
+					url:'login.html' 
+				});
+		})
+		
+		mui(".mui-content").on('tap','.wuliu',function(){
+			var id = this.getAttribute("id");
+			mui.openWindow(
+				{ 
+					id:'detail',
+					url:'1.2wuliu.html' 
+				});
+		})
+		document.getElementById('yishu1').addEventListener('tap', function() {
+		  mui.openWindow({
+		    url: '1.3yishuyishu.html', 
+		    id:'info'
+		  });
+		});
+		document.getElementById('yishu2').addEventListener('tap', function() {
+		  mui.openWindow({
+		    url: '1.3yishuyishu.html', 
+		    id:'info'
+		  });
+		});
+		mui(".mui-content").on('tap','.quanzi',function(){
+			var id = this.getAttribute("id");
+			mui.openWindow(
+				{ 
+					id:'detail',
+					url:'1.4wodequanzi.html' 
+				});
+		})
+		
+
+		</script>
+	</body>
+</html>

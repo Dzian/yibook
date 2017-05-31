@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/yishuyishu.css"/>
+		<link rel="stylesheet" type="text/css" href="css/1.3yishuyishu.css"/>
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">以书易书</h1>
+		</header>
+		
+		<div class="mui-content">
+            <div class="mui-card">
+				<div class="mui-card-header">
+					<img src="images/header.png"/>
+					<span>Vivien</span>
+					<span class="sp2">承德石油高专</span>
+					<div class="sp3">
+						<span class="mui-icon mui-icon-chatboxes"></span>消息
+					</div>
+				</div>
+				<div class="mui-card-content">
+				        <div class="mui-col-sm-2">
+				            <li>
+				                <img src="images/bookCover.png"/>
+				            </li>
+				        </div>
+				        <div class="mui-col-sm-9">
+				            <li>
+				            	<span>HTML5程序设计</span>
+				            </li>
+				            <li>
+				            	<p class="sp8">本书首先介绍了HTML5的历史背景，新的语义标签及与以往HTML版本相比的...</p>
+				            </li>
+				            <li>
+								<p><span class="sp4">￥18</span>
+								<span><s>￥59</s></span></p>
+				           </li>
+				            <li>
+								<p class="sp6">发表于2017-01-01&nbsp;14:00:32</p>
+				            </li>
+				        </div>
+				</div>
+			</div>
+			<div class="mui-content">
+            <div class="mui-card" style="margin-top: 0px;">
+				<div class="mui-card-header">
+					<img src="images/header.png"/>
+					<span>Vivien</span>
+					<span class="sp2">承德石油高专</span>
+					<div class="sp3">
+						<span class="mui-icon mui-icon-chatboxes"></span>消息
+					</div>
+				</div>
+				<div class="mui-card-content">
+				        <div class="mui-col-sm-2">
+				            <li>
+				                <img src="images/bookCover.png"/>
+				            </li>
+				        </div>
+				        <div class="mui-col-sm-9">
+				            <li>
+				            	<span>HTML5程序设计</span>
+				            </li>
+				            <li>
+				            	<p class="sp8">本书首先介绍了HTML5的历史背景，新的语义标签及与以往HTML版本相比的...</p>
+				            </li>
+				            <li>
+								<p><span class="sp4">￥18</span>
+								<span><s>￥59</s></span></p>
+				           </li>
+				            <li>
+								<p class="sp6">发表于2017-01-01&nbsp;14:00:32</p>
+				            </li>
+				        </div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		mui(".mui-card-header").on('tap','.sp3',function(){
+			var id = this.getAttribute("id");
+			mui.openWindow(
+				{ 
+					id:'detail',
+					url:'Vivien.html' 
+				});
+		})
+		mui(".mui-card").on('tap','.mui-card-content',function(){
+			var id = this.getAttribute("id");
+			mui.openWindow(
+				{ 
+					id:'detail',
+					url:'tushuxiangqing.html' 
+				});
+		})
+
+	</script>
+</html>

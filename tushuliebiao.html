@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/tushuliebiao.css"/>
+	</head>
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">图书列表</h1>
+		    <div class="mui-bar mui-bar-nav" id="btn" style="margin-top: 40px;float: left;">
+			    <div class="mui-row" style="text-align: center;">
+			    	<a href="#popover" class="mui-col-xs-4" style=" color: red;font-size: 15px;border-right: 1px solid lightgray;">全部<h1 class="mui-icon mui-icon-arrowright" style="font-size: 16px;"></h1></a>
+			    	<a href="#popover" class="mui-col-xs-4" style=" color: red;font-size: 15px;border-right: 1px solid lightgray;">所有城市<h1 class="mui-icon mui-icon-arrowright" style="font-size: 16px;"></h1></a>
+			    	<a href="#popover" class="mui-col-xs-4" style=" color: red;font-size: 15px;">智能排序<h1 class="mui-icon mui-icon-arrowright" style="font-size: 16px;"></h1></a>
+			    </div>
+		    </div>
+		    
+		    <!--<div class="mui-bar mui-bar-nav" id="btn" style="margin-top: 40px;float: left;">
+		    	<a href="#popover" class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined" style=" color: red;font-size: 15px;">全部<h1 class="mui-icon mui-icon-arrowright" style="font-size: 16px;"></h1></a>
+			    <a href="#popover" class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined" style=" color: red;font-size: 14px">所有城市<h1 class="mui-icon mui-icon-arrowright" style="font-size: 16px;"></h1></a>
+			    <a href="#popover" class="mui-btn mui-btn-primary mui-btn-block mui-btn-outlined" style=" color: red;font-size: 14px">智能排序<h1 class="mui-icon mui-icon-arrowright" style="font-size: 16px;"></h1></a>			
+		    </div>-->
+		</header>
+		
+		<div id="popover" class="mui-popover">
+		  <ul class="mui-table-view">
+		    <li class="mui-table-view-cell"><a href="#">Item1</a></li>
+		    <li class="mui-table-view-cell"><a href="#">Item2</a></li>
+		    <li class="mui-table-view-cell"><a href="#">Item3</a></li>
+		    <li class="mui-table-view-cell"><a href="#">Item4</a></li>
+		    <li class="mui-table-view-cell"><a href="#">Item5</a></li>
+		  </ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		mui.init({
+		    subpages:[{
+		      url:'tushuliebiao_2.html',
+		      id:'tushuliebiao_2.html',
+		      styles:{
+		        top:'85px',
+		        bottom:'0px'
+		      }
+		    }]
+		  });
+        
+
+
+		
+//		mui.init({
+//			preloadPages:[{
+//			id:'detail.html',
+//			url:'detail.html' 
+//			}
+//			]
+//			});
+//			
+//			var detailPage = null;
+//			//添加列表项的点击事件
+//			mui('.mui-content').on('tap', 'a', function(e) {
+//			var id = this.getAttribute('id');
+//			//获得详情页面
+//			if(!detailPage){
+//			detailPage = plus.webview.getWebviewById('detail.html');
+//			}
+//			//触发详情页面的newsId事件
+//			mui.fire(detailPage,'newsId',{
+//			id:id
+//			});
+//			//打开详情页面
+//			mui.openWindow({
+//			id:'detail.html'
+//			});
+//			});
+	</script>
+</html>
